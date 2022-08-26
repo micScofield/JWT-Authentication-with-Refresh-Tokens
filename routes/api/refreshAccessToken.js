@@ -26,7 +26,7 @@ router.get('/api/access', (req, res) => {
         return res.status(200).json({ msg: 'Access token refreshed' })
     } catch (err) {
         console.log(err)
-        return res.status(401).json({ msg: 'Invalid refresh token provided' })
+        return res.status(400).json({ msg: 'Invalid refresh token provided' })
     }
 })
 
